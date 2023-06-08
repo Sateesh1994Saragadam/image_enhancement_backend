@@ -23,8 +23,8 @@ app.post("/img_answering", async (req, res) => {
 
   const model = "joehoover/instructblip-vicuna13b:c4c54e3c8c97cd50c2d2fec9be3b6065563ccf7d43787fb99f84151b867178fe";
   const input = {
-    image: fileUrl,
     prompt: prompt,
+    img: fileUrl,
   };
   const output = await replicate.run(model, { input });
 
