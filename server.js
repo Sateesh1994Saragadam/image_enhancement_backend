@@ -29,10 +29,10 @@ app.post("/img_answering", async (req, res) => {
     auth: process.env.REPLICATE_API_TOKEN,
   });
 
-  const model = "joehoover/instructblip-vicuna13b:c4c54e3c8c97cd50c2d2fec9be3b6065563ccf7d43787fb99f84151b867178fe";
+  const model = "daanelson/minigpt-4:b96a2f33cc8e4b0aa23eacfce731b9c41a7d9466d9ed4e167375587b54db9423";
   const input = {
     prompt: prompt,
-    img: fileUrl,
+    image: fileUrl,
   };
   const output = await replicate.run(model, { input });
 
